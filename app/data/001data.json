@@ -1,0 +1,29 @@
+{
+  "device": {
+    "name": "UWT6008",
+    "id": "001",
+    "vendor": "Pavone Sistemi"
+  },
+
+  "params": {
+    "unit": 4
+  },
+
+  "weights": {
+    "brutto": 200,
+    "netto": 200,
+    "tare": 0,
+    "peak": 200,
+    "valley": 0,
+    "weight1": 45,
+    "weight2": 56,
+    "weight3": 34,
+    "weight4": 65,
+    "weight5": 0,
+    "weight6": 0,
+    "weight7": 0,
+    "weight8": 0,
+    "weightA": 0,
+    "weightB": 0
+  }
+}

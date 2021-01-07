@@ -1,0 +1,81 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}This is an example page{% endblock %}
+{% block metas %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta name="description" content="">
+  <meta name="author" content="">
+{% endblock %}
+{% block styles %}
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+<!--   <link href="static/css/heroic-features.css" rel="stylesheet"> -->
+{% endblock styles %}
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/index"><img src="/static/img/content/logo.png" alt="UTILCELL" class="img-responsive"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">Hlavní<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">...</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projekty</a>
+            <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item dropdown-item-action" href="#">GAT1</a>
+              <a class="dropdown-item dropdown-item-action" href="#">DYFOS</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Ostatní</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplikace</a>
+            <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item dropdown-item-action" href="/uwt6008">Modbus RTU</a>
+              <a class="dropdown-item dropdown-item-action" href="#">Modbus TCP</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">EtherNet/IP</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kontakty</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+{% block content %}{% endblock %}
+{% block footer %}
+<footer class="py-5 bg-dark">
+<div class="container">
+  <p class="m-0 text-center text-white">Copyright &copy;2020, <a href="https://www.utilcell.com/">Utilcell.com</a>   Tvorba webu<a href="https://startbootstrap.com/" target="_blank"> Start Bootstrap</a></p>
+</div>
+<!-- /.container -->
+</footer>
+{% endblock %}
+{% block scripts %}
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

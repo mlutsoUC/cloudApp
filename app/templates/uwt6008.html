@@ -1,0 +1,22 @@
+{% extends "app_base.html" %}
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+<div class="jumbotron my-4">
+	<h1>UWT6008 Page</h1><hr>
+	<p>Hruba hmotnost: </span><span style="text-align: center" class="well well-sm">{{ weights['brutto'] }}</span>{{  units['weight'] }}</p><br>
+	<p id="codeRefer">Cista hmotnost: <span class="well well-sm">{{ weights['netto'] }}</span>{{ units['weight'] }}</p><br>
+	<p>Tara hmotnost: <span class="well well-sm">{{ weights['tare'] }}</span>{{ units['weight'] }}</p><br>
+	<p>Spicka hmotnost: <span class="well well-sm">{{ weights['peak'] }}</span>{{ units['weight'] }}</p><br>
+	<p>Hmotnost1: <span class="well well-sm">{{ weights['weight1'] }}</span>{{ units['weight'] }}</p><br>
+	<p>Hmotnost2: <span class="well well-sm">{{ weights['weight2'] }}</span>{{ units['weight'] }}</p><br>
+	<p>Hmotnost3: <span class="well well-sm">{{ weights['weight3'] }}</span>{{ units['weight'] }}</p><br>
+	<p>Hmotnost4: <span class="well well-sm">{{ weights['weight4'] }}</span>{{ units['weight'] }}</p><br>
+	<hr>
+	<div id="command">
+		<br>
+		<button type="btn btn-submit" onclick="location.reload()">Reload</button>
+		<br>
+	</div>
+</div>
+{% endblock %}
